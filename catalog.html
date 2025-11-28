@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - Clothes Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Меню -->
+    <div class="menu-container">
+        <button class="menu-btn" onclick="toggleMenu()">☰ Меню</button>
+        <nav class="menu-list" id="menuList">
+            <a href="index.html">Главная</a>
+            <a href="catalog.html" class="active">Каталог</a>
+            <a href="cart.html">Корзина</a>
+        </nav>
+    </div>
+
+    <!-- Контент каталога -->
+    <div class="content">
+        <h1 class="catalog-title">Каталог товаров</h1>
+        <div class="catalog-grid">
+            <div class="product-card" data-product-image="images/tshirt.png">
+                <div class="product-image">
+                    <img src="images/tshirt.png" alt="Футболка розовая варенка" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Футболка розовая варенка</h3>
+                    <div class="product-price">1 499 ₽</div>
+                    <div class="add-to-cart-controls" data-product-name="Футболка розовая варенка" data-product-price="1499">
+                        <button class="add-cart-btn" onclick="addFirstItem('Футболка розовая варенка', 1499)">В корзину</button>
+                        <div class="qty-controls hidden" id="controls-Футболка розовая варенка">
+                            <button class="qty-btn decrease" onclick="decreaseQty('Футболка розовая варенка')">-</button>
+                            <span class="qty-value" id="qty-Футболка розовая варенка">0</span>
+                            <button class="qty-btn increase" onclick="increaseQty('Футболка розовая варенка', 1499)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-product-image="images/jeans.png">
+                <div class="product-image">
+                    <img src="images/jeans.png" alt="Джинсы синие" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Джинсы синие</h3>
+                    <div class="product-price">2 000</div>
+                    <div class="add-to-cart-controls" data-product-name="Джинсы синие" data-product-price="2000">
+                        <button class="add-cart-btn" onclick="addFirstItem('Джинсы синие', 2000)">В корзину</button>
+                        <div class="qty-controls hidden" id="controls-Джинсы синие">
+                            <button class="qty-btn decrease" onclick="decreaseQty('Джинсы синие')">-</button>
+                            <span class="qty-value" id="qty-Джинсы синие">0</span>
+                            <button class="qty-btn increase" onclick="increaseQty('Джинсы синие', 2000)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-product-image="images/dress.png">
+                <div class="product-image">
+                    <img src="images/dress.png" alt="Платье с оборками" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Платье с оборками</h3>
+                    <div class="product-price">3 499 ₽</div>
+                    <div class="add-to-cart-controls" data-product-name="Платье с оборками" data-product-price="3499">
+                        <button class="add-cart-btn" onclick="addFirstItem('Платье с оборками', 3499)">В корзину</button>
+                        <div class="qty-controls hidden" id="controls-Платье с оборками">
+                            <button class="qty-btn decrease" onclick="decreaseQty('Платье с оборками')">-</button>
+                            <span class="qty-value" id="qty-Платье с оборками">0</span>
+                            <button class="qty-btn increase" onclick="increaseQty('Платье с оборками', 3499)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="catalog.js"></script>
+</body>
+</html>
